@@ -1,0 +1,108 @@
+h1 {
+	background-color: #29e09a4e;
+	text-align: center;
+	font-size: 4vw
+}
+
+h2 {
+	/* background-color: #29e09a4e; */
+	text-align: center;
+	/* font-size: 40px; */
+	font-size: 2vw
+}
+
+.logo {
+	/* max-width: 100%; */
+	height: auto;
+	opacity: 0.75;
+	width: 5%;
+}
+
+.plant-name {
+	/* background-color: #29e09a4e; */
+	text-align: center;
+	/* font-size: 40px; */
+	font-size: 2vw
+}
+
+/* All plant images have set size */
+.plant-img {
+	width: 500px;
+	height: 500px;
+	/* opacity: 0.75; */
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+	object-fit: scale-down;
+}
+
+
+/* Give plant images a cool green overlay showing category and description */
+
+.column {
+	position: relative;
+	width: 50%;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	background-color: #12c47f96;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+}
+
+.column:hover .overlay {
+	bottom: 0;
+	height: 100%;
+}
+
+.description {
+	/* white-space: nowrap; */
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	/* text-align: center; */
+	display: block;
+}
+
+.category {
+		/* white-space: nowrap; */
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		overflow: hidden;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		/* text-align: center; */
+		display: block;
+	}
+
+
+/* Style page to three images per row */
+
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 33.33%; /* 25% or 50% */
+	padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
