@@ -14,7 +14,7 @@
 	function getAllPlants() 
 	{
 		$mysqli = connect();
-		$res = $mysqli->query("SELECT * FROM plants WHERE category != 'Flag';");
+		$res = $mysqli->query("SELECT * FROM plants WHERE category != 'flag';");
 		
 		while($row = $res->fetch_assoc()){
 			$plants[] = $row;
