@@ -1,22 +1,15 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+DROP DATABASE IF EXISTS plants;
+CREATE DATABASE plants;
+USE plants;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
-
-DROP TABLE IF EXISTS `plants`;
-CREATE TABLE `plants` (
+CREATE TABLE plants (
   `name` varchar(64) NOT NULL,
   `category` varchar(16) NOT NULL,
   `description` varchar(256) NOT NULL,
   `image` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `plants` (`name`, `category`, `description`, `image`) VALUES
+INSERT INTO plants (`name`, `category`, `description`, `image`) VALUES
 ('Aloe Vera', 'outdoor', 'Aloe vera is a herb with succulent leaves that are arranged in a rosette. The leaves are  green with sharp spines along the edge and sometimes have white spots on their surfaces.', 'images\\aloe-vera.jpg'),
 ('Dirt', 'essential', 'Loose soil or earth', 'images\\dirt.jpg'),
 ('Ficus Elastica Burgundy', 'indoor', 'This plant features very dark green, nearly black leaves with red mid-veins', 'images\\ficus-elastica-burgundy.jpg'),
@@ -38,7 +31,3 @@ INSERT INTO `plants` (`name`, `category`, `description`, `image`) VALUES
 ALTER TABLE `plants`
   ADD PRIMARY KEY (`name`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
