@@ -1,6 +1,6 @@
 <?php
 	function connect() {
-		$mysqli = new mysqli('localhost', 'root', '','plants');
+		$mysqli = new mysqli('localhost', 'homey_plants', 'pl@nt_l0v3R','plants');
 		
 		if($mysqli->connect_errno != 0) {
 			return $mysqli->connect_error;
