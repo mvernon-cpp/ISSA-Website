@@ -7,9 +7,9 @@
 <body>
 
 	<h1>
-		<img class="logo" src="files\leaf-silhouette.png" alt="logo">
+		<img class="logo" src="..\files\leaf-silhouette.png" alt="logo">
 		HOMEY PLANTS
-		<img class="logo" src="files\leaf-silhouette.png" alt="logo">
+		<img class="logo" src="..\files\leaf-silhouette.png" alt="logo">
 	</h1>
 
 	<hr>
